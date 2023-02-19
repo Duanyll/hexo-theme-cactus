@@ -67,3 +67,7 @@ comments:
 tooltip:
   copy_tip: Copy to clipboard!
   copied: Copied!
+
+license:
+  text: This work is licensed under a 
+  permalink: Permalink
