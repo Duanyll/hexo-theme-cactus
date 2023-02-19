@@ -12,7 +12,7 @@ article
       margin-bottom: 1rem
 
     .meta *
-      color: $color-accent-3
+      color: var(--color-accent-3)
       font-size: .85rem
 
     .author
@@ -28,7 +28,7 @@ article
       position: absolute
       top: -4px
       left: -1rem
-      color: $color-accent-1
+      color: var(--color-accent-1)
       content: "#"
       font-weight: bold
       font-size: 1.2rem
@@ -59,7 +59,7 @@ article
       margin: 1rem 10px
       padding: .5em 10px
       background: inherit
-      color: $color-quote
+      color: var(--color-quote)
       quotes: "\201C" "\201D" "\2018" "\2019"
       font-weight: bold
 
@@ -68,7 +68,7 @@ article
 
       &:before
         margin-right: .25em
-        color: $color-quote
+        color: var(--color-quote)
         content: "\201C"
         vertical-align: -.4em
         font-size: 2em
@@ -76,16 +76,16 @@ article
 
       footer
         margin: line-height 0
-        color: $color-meta
+        color: var(--color-meta)
         font-size: 12px
 
         a
-          background-image: linear-gradient(transparent, transparent 5px, $color-meta 5px, $color-meta)
-          color: $color-meta
+          background-image: linear-gradient(transparent, transparent 5px, var(--color-meta) 5px, var(--color-meta))
+          color: var(--color-meta)
 
         a:hover
-          background-image: linear-gradient(transparent, transparent 4px, lighten($color-meta, 20%) 4px, lighten($color-meta, 20%))
-          color: lighten($color-meta, 20%)
+          background-image: linear-gradient(transparent, transparent 4px, var(--color-meta-lighten-20) 4px, var(--color-meta-lighten-20))
+          color: var(--color-meta-lighten-20)
 
         cite
           &:before
@@ -109,7 +109,7 @@ article
       position: relative
       display: block
       margin-top: .5em
-      color: $color-meta
+      color: var(--color-meta)
       text-align: center
       font-size: .9em
 
@@ -122,11 +122,11 @@ article
   .tag-link
     &:before
       content: "#"
-    underline(10px, $color-link)
+    underline(10px, var(--color-link))
 
 .article-category
   .category-link
-    underline(10px, $color-link)
+    underline(10px, var(--color-link))
 
 @media (min-width: 480px)
   .article-tag,

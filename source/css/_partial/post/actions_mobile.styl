@@ -5,8 +5,8 @@
   left: 0
   z-index: 5000000
   width: 100%
-  border-top: 1px solid $color-border
-  background: $color-footer-mobile-1
+  border-top: 1px solid var(--color-border)
+  background: var(--color-footer-mobile-1)
   transition: opacity .2s
 
   a
@@ -18,20 +18,20 @@
     background: none
 
     &:hover
-      color: $color-link
+      color: var(--color-link)
 
   #nav-footer
     padding-right: 1rem
     padding-left: 1rem
-    background: $color-footer-mobile-2
+    background: var(--color-footer-mobile-2)
     text-align: center
 
     a
-      color: $color-accent-1
+      color: var(--color-accent-1)
       font-size: 1em
 
     a:hover
-      underline(5px, $color-accent-1)
+      underline(5px, var(--color-accent-1))
 
     ul
       display: table
@@ -59,12 +59,12 @@
     a
       display: inline-block
       padding-left: 1rem
-      color: $color-accent-1
+      color: var(--color-accent-1)
 
   #share-footer
     padding-right: 1rem
     padding-left: 1rem
-    background: $color-footer-mobile-2
+    background: var(--color-footer-mobile-2)
     text-align: center
 
     ul
@@ -84,7 +84,7 @@
     clear: both
     padding-top: 1rem
     padding-bottom: 1rem
-    background: $color-footer-mobile-2
+    background: var(--color-footer-mobile-2)
     text-align: left
 
     ol
@@ -96,21 +96,21 @@
         line-height: 30px
 
     a:hover
-      color: $color-link
+      color: var(--color-link)
 
     .toc-level-1 > .toc-link
       display: none
 
     .toc-level-2
-      color: $color-text
+      color: var(--color-text)
       font-size: .8rem
 
       &:before
-        color: $color-accent-1
+        color: var(--color-accent-1)
         content: "#"
 
     .toc-level-3
-      color: $color-meta
+      color: var(--color-meta)
       font-size: .7rem
       line-height: 15px
 

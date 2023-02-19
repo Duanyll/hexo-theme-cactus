@@ -1,5 +1,5 @@
 @import "_variables"
-@import "_colors/" + $colors
+@import "_color"
 @import "_util"
 @import "_mixins"
 @import "_extend"
@@ -13,7 +13,7 @@ global-reset()
 /* Scroll bar */
 /* For Firefox */
 *
-  scrollbar-color: $color-scrollbar transparent
+  scrollbar-color: var(--color-scrollbar) transparent
 
 /* For Chrome, Edge, and Safari */
 *::-webkit-scrollbar
@@ -24,28 +24,28 @@ global-reset()
   background: transparent
 
 *::-webkit-scrollbar-thumb
-  background-color: $color-scrollbar
+  background-color: var(--color-scrollbar)
   border-radius: 6px
 
 *::-webkit-scrollbar-thumb:hover
-  background-color: darken($color-scrollbar, 20%)
+  background-color: var(--color-scrollbar-hover)
 
 *::-webkit-scrollbar-thumb:active
-  background-color: darken($color-scrollbar, 30%)
+  background-color: var(--color-scrollbar-active)
 
 html
   margin: 0
   padding: 0
   height: 100%
-  border-top: 2px solid $color-text
+  border-top: 2px solid var(--color-text)
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
 
 body
   margin: 0
   height: 100%
-  background-color: $color-background
-  color: $color-text
+  background-color: var(--color-background)
+  color: var(--color-text)
   font-display: swap // @stylint ignore
   font-weight: 400
   font-size: $font-size
@@ -72,19 +72,19 @@ body
     hyphens(manual)
 
   a
-    color: $color-text
+    color: var(--color-text)
     text-decoration: none
 
-    underline(5px, $color-text)
+    underline(5px, var(--color-text))
 
     &:hover
-      background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link)
+      background-image: linear-gradient(transparent, transparent 4px, var(--color-link) 4px, var(--color-link))
 
   a.icon
     background: none
 
     &:hover
-      color: $color-link
+      color: var(--color-link)
 
   h1 a, .h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
     background: none
@@ -92,7 +92,7 @@ body
     text-decoration: none
 
   h1 a:hover, .h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
-    underline(6px, $color-link)
+    underline(6px, var(--color-link))
 
   h6
     a
@@ -102,7 +102,7 @@ body
 
   h6
     a:hover
-      underline(6px, $color-link)
+      underline(6px, var(--color-link))
 
 @media (min-width: 540px)
   .image-wrap
@@ -154,7 +154,7 @@ pre
   overflow-x: auto
   padding: 10px 15px
   padding-bottom: 0
-  border: 1px dotted $color-border
+  border: 1px dotted var(--color-border)
   border-radius: 4px
   font-size: 13px
   font-family: $font-family-mono
@@ -168,7 +168,7 @@ pre
 
 code
   padding: 0 5px
-  border: 1px dotted $color-border
+  border: 1px dotted var(--color-border)
   border-radius: 2px
   -webkit-border-radius: 2px
 
@@ -177,27 +177,27 @@ code
   margin: 1rem 0
   padding: 10px 15px
   border-radius: 4px
-  background: $color-background-code
+  // background: var(--color-background-code)
   font-family: $font-family-mono
-  // color: $color-accent-3
+  // color: var(--color-accent-3)
   -webkit-border-radius: 4px
 
   figcaption
     margin: -5px 0 5px
-    color: $color-meta-code
+    color: var(--color-meta-code)
     font-size: .9em
     transform: scale(1)
 
     a
       float: right
-      color: $color-meta-code
+      color: var(--color-meta-code)
       font-style: italic
       font-size: .8em
 
-      underline(10px, $color-link)
+      underline(10px, var(--color-link))
 
     a:hover
-      color: lighten($color-meta-code, 20%)
+      color: var(--color-meta-code-lighten-20)
 
     &:before, content: ""
       display: table
@@ -216,7 +216,7 @@ code
     opacity: 0
     transition: opacity 0.2s ease-in
     &:hover
-      color: $color-accent-1
+      color: var(--color-accent-1)
 
   pre
     margin: 0

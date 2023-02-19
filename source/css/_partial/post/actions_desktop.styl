@@ -15,7 +15,7 @@
     background: none
 
     &:hover
-      color: $color-link
+      color: var(--color-link)
 
   ol
     list-style-type: none
@@ -40,7 +40,7 @@
     margin-left: 15px
 
     &:hover
-      color: $color-accent-1
+      color: var(--color-accent-1)
 
   #menu-icon-tablet
     float: right
@@ -48,7 +48,7 @@
     margin-left: 15px
 
     &:hover
-      color: $color-accent-1
+      color: var(--color-accent-1)
 
   #top-icon-tablet
     position: fixed
@@ -58,17 +58,17 @@
     margin-left: 15px
 
     &:hover
-      color: $color-accent-1
+      color: var(--color-accent-1)
 
   .active
-    color: $color-accent-1
+    color: var(--color-accent-1)
 
   #menu
     display: none
     margin-right: 2rem
 
   #nav
-    color: $color-accent-1
+    color: var(--color-accent-1)
     letter-spacing: .01em
     font-weight: 200
     font-style: normal
@@ -79,13 +79,13 @@
 
       a
         margin-right: 15px
-        color: $color-accent-1
+        color: var(--color-accent-1)
 
       a:hover
-        underline(5px, $color-accent-1)
+        underline(5px, var(--color-accent-1))
 
       li
-        border-right: 1px dotted $color-accent-1
+        border-right: 1px dotted var(--color-accent-1)
 
       li:last-child
         margin-right: 0
@@ -129,25 +129,25 @@
     text-align: right
 
     a:hover
-      color: $color-link
+      color: var(--color-link)
 
     .toc-level-1 > .toc-link
       display: none
 
     .toc-level-2
-      color: $color-text
+      color: var(--color-text)
       font-size: .8rem
 
       &:before
-        color: $color-accent-1
+        color: var(--color-accent-1)
         content: "#"
 
     .toc-level-3
-      color: $color-meta
+      color: var(--color-meta)
       font-size: .7rem
 
     .toc-level-4
-      color: darken($color-meta, 20%)
+      color: var(--color-meta-darken-20)
       font-size: .4rem
 
     .toc-level-5
