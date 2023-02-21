@@ -1,7 +1,7 @@
 <% if (theme.license && theme.license.enable && !page.nolicense) { %>
-    <div class="post-license">
-        <div class="post-license-container">
-            <a class="post-license-logo" href="<%- url_for(theme.license.url) %>">
+    <div class="info">
+        <div class="license-container">
+            <a class="license-logo" href="<%- url_for(theme.license.url) %>">
                 <img src="<%- url_for(theme.license.logo_url) %>" alt="<%- theme.license.name %>"/>
             </a>
             <div>
