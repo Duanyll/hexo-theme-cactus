@@ -32,28 +32,26 @@ if hexo-config("colorscheme.auto")
   $colors-dark = hexo-config("colorscheme.dark") || "dark"
   @import "_colors/" + $colors-dark
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-background: $color-background
-      --color-footer-mobile-1: $color-footer-mobile-1
-      --color-footer-mobile-2: $color-footer-mobile-2
-      --color-background-code: $color-background-code
-      --color-border: $color-border
-      --color-scrollbar: $color-scrollbar
-      --color-scrollbar-hover: dark($color-scrollbar, 20%)
-      --color-scrollbar-active: dark($color-scrollbar, 30%)
-      --color-meta: $color-meta
-      --color-meta-darken-20: darken($color-meta, 20%)
-      --color-meta-lighten-20: lighten($color-meta, 20%)
-      --color-meta-code: $color-meta-code
-      --color-meta-code-lighten-20: lighten($color-meta-code, 20%)
-      --color-link: $color-link
-      --color-text: $color-text
-      --color-accent-3: $color-accent-3
-      --color-accent-2: $color-accent-2
-      --color-accent-1: $color-accent-1
-      --color-quote: $color-quote
-    }
+  .dark-mode {
+    --color-background: $color-background
+    --color-footer-mobile-1: $color-footer-mobile-1
+    --color-footer-mobile-2: $color-footer-mobile-2
+    --color-background-code: $color-background-code
+    --color-border: $color-border
+    --color-scrollbar: $color-scrollbar
+    --color-scrollbar-hover: dark($color-scrollbar, 20%)
+    --color-scrollbar-active: dark($color-scrollbar, 30%)
+    --color-meta: $color-meta
+    --color-meta-darken-20: darken($color-meta, 20%)
+    --color-meta-lighten-20: lighten($color-meta, 20%)
+    --color-meta-code: $color-meta-code
+    --color-meta-code-lighten-20: lighten($color-meta-code, 20%)
+    --color-link: $color-link
+    --color-text: $color-text
+    --color-accent-3: $color-accent-3
+    --color-accent-2: $color-accent-2
+    --color-accent-1: $color-accent-1
+    --color-quote: $color-quote
   }
 
 @import "_colors/" + $colors-default

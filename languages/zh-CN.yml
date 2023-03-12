@@ -29,6 +29,7 @@ post:
     next: 下一篇
     back_to_top: 返回顶部
     share: 分享文章
+    mode: 切换深色模式
   mobile:
     menu: 菜单
     toc: 目录

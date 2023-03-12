@@ -29,6 +29,7 @@ post:
     next: Next post
     back_to_top: Back to top
     share: Share post
+    mode: Toggle dark mode
   mobile:
     menu: Menu
     toc: TOC
