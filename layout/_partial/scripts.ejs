@@ -1,31 +1,31 @@
 <!-- jquery -->
-<% if (isCdnEnable('jquery')) {%> 
-  <%- getCdnScript('jquery') %> 
-<% } else { %> 
+<% if (isCdnEnable('jquery')) {%>
+  <%- getCdnScript('jquery') %>
+<% } else { %>
   <%- js('lib/jquery/jquery.min') %>
 <% } %>
 
 <% if (page.photos && page.photos.length) { %>
   <% if (isCdnEnable('justified_gallery_js')) {%>
-    <%- getCdnScript('justified_gallery_js') %> 
-  <% } else { %> 
+    <%- getCdnScript('justified_gallery_js') %>
+  <% } else { %>
     <%- js('lib/justified-gallery/js/jquery.justifiedGallery.min.js') %>
-  <% } %> 
+  <% } %>
 <% } %>
 
 <!-- clipboard -->
 <% if (is_post()){ %>
   <% if (isCdnEnable('clipboard')) { %>
-    <%- getCdnScript('clipboard') %> 
-  <% } else { %> 
+    <%- getCdnScript('clipboard') %>
+  <% } else { %>
     <%- js('lib/clipboard/clipboard.min') %>
   <% } %>
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
     var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%= __('tooltip.copy_tip') %>\">";
-    btn += '<i class="far fa-clone"></i>';
-    btn += '</span>'; 
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
     // mount it!
     $(".highlight table").before(btn);
     var clip = new ClipboardJS('.btn-copy', {
@@ -80,16 +80,6 @@
   });
   </script>
 <% } %>
-<!-- Google Analytics -->
-<% if (theme.google_analytics.enabled && theme.google_analytics.id){ %>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.google_analytics.id %>"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '<%= theme.google_analytics.id %>');
-    </script>
-<% } %>
 <!-- Baidu Analytics -->
 <% if (theme.baidu_analytics.enabled && theme.baidu_analytics.id){ %>
   <script type="text/javascript">
@@ -105,10 +95,6 @@
 <!-- Cloudflare Analytics -->
 <% if (theme.cloudflare_analytics.enabled && theme.cloudflare_analytics.id){ %>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "<%= theme.cloudflare_analytics.id %>"}'></script>
-<% } %>
-<!-- Umami Analytics -->
-<% if (theme.umami_analytics.enabled && theme.umami_analytics.id && theme.umami_analytics.host){ %>
-  <script async defer data-website-id="<%= theme.umami_analytics.id %>" src="<%= theme.umami_analytics.host %>/umami.js"></script>
 <% } %>
 <!-- Disqus Comments -->
 <% if (page.comments && theme.disqus.enabled && theme.disqus.shortname){ %>
