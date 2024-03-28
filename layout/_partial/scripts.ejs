@@ -1,10 +1,3 @@
-<!-- jquery -->
-<% if (isCdnEnable('jquery')) {%>
-  <%- getCdnScript('jquery') %>
-<% } else { %>
-  <%- js('lib/jquery/jquery.min') %>
-<% } %>
-
 <% if (page.photos && page.photos.length) { %>
   <% if (isCdnEnable('justified_gallery_js')) {%>
     <%- getCdnScript('justified_gallery_js') %>
